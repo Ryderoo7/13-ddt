@@ -1,0 +1,62 @@
+from tkinter import Tk, Label, Entry, OptionMenu, Button, Toplevel
+from PIL import Image, ImageTk
+from tkinter import StringVar
+
+def calculate_calories():
+    # Calculate calories based on user input and show the result in a new window.
+    # Add your calculation logic here.
+    pass
+
+root = Tk()
+root.geometry("400x400")
+root.title("Calorie Calculator")
+
+label = Label(root, text="Calorie Calculator", font=("Arial", 18, "bold"))
+label.pack(pady=20)
+
+gender_label = Label(root, text="Gender:")
+gender_label.pack()
+
+gender_options = ["Male", "Female"]
+gender_var = StringVar(root)
+gender_var.set("Select Gender")
+gender_menu = OptionMenu(root, gender_var, *gender_options)
+gender_menu.pack()
+
+age_label = Label(root, text="Age:")
+age_label.pack()
+
+age_entry = Entry(root)
+age_entry.pack()
+
+weight_label = Label(root, text="Weight (kg):")
+weight_label.pack()
+
+weight_entry = Entry(root)
+weight_entry.pack()
+
+height_label = Label(root, text="Height (cm):")
+height_label.pack()
+
+height_entry = Entry(root)
+height_entry.pack()
+
+activity_label = Label(root, text="Activity Level:")
+activity_label.pack()
+
+activity_options = [
+    "No Activity (<1 hour a week)",
+    "Small Activity (<3 hours a week)",
+    "Medium Activity (30 minutes a day)",
+    "High Activity (1 hour a day)",
+    "Intense Activity (>1 hour a day)"
+]
+activity_var = StringVar(root)
+activity_var.set("Select Activity Level")
+activity_menu = OptionMenu(root, activity_var, *activity_options)
+activity_menu.pack()
+
+calculate_button = Button(root, text="Calculate Calories", command=calculate_calories)
+calculate_button.pack(pady=20)
+
+root.mainloop()
