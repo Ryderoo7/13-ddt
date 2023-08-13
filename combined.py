@@ -158,6 +158,10 @@ def signupbutton():
         password = entry_password_signup.get()
         confirm_password = entry_confirm_password_signup.get()
         weight = weight_signup.get()
+        # Makes password length > 6 characters
+        if len(password) < 6:
+            messagebox.showerror("Error", "Password must be at least 6 characters long")
+            return
 
         conn = sqlite3.connect('User+pass.db')
         cursor = conn.cursor()
