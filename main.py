@@ -16,7 +16,6 @@ from PIL import Image, ImageTk
 import subprocess
 
 
-
 def calculate_calories():
     """
     Calculate the estimated daily calorie intake based on user input for age, weight, height,
