@@ -14,16 +14,7 @@ from tkinter import BooleanVar
 from tkinter import Canvas
 from PIL import Image, ImageTk
 import subprocess
-import pygame
 
-
-def calculatesound():
-    """
-    Play a sound effect using the pygame library.
-    """
-    pygame.mixer.init()
-    pygame.mixer.music.load(r"Sound effects\Congratulations.mp3")
-    pygame.mixer.music.play(1)
 
 
 def calculate_calories():
